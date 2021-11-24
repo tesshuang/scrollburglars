@@ -22,6 +22,7 @@ h2 {
 }
 
 main {
+  position: relative;
   padding-top: 64px;
   isolation: isolate;
   max-width: 100%;
@@ -112,6 +113,7 @@ a {
 .social-wrapper {
   position: sticky;
   top: 0px;
+  pointer-events: auto;
 }
 
 .social-icons {
@@ -149,7 +151,7 @@ a {
 .heading-decoration {
   position: absolute;
   top: -25px;
-  right: 13px;
+  right: 0px;
   width: 75px;
   height: 75px;
   background: papayawhip;
@@ -159,4 +161,19 @@ a {
 
 .heading-content {
   position: relative;
+}
+
+.center-layer.floating {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.center-layer.floating .max-width-wrapper {
+  height: inherit;
+}
+
+.center-layer:not(.floating) {
+  overflow: hidden;
 }
